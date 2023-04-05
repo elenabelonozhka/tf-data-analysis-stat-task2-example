@@ -10,5 +10,5 @@ chat_id = 728846853 # Ваш chat ID, не меняйте название пе�
 
 def solution(p: float, x: np.array) -> tuple:
   n = len(x)
-  return np.sqrt(sum(x**2)/ (6*chi2.ppf((1+p)/2, df = n))), \
-  np.sqrt(sum(x**2)/ (6*chi2.ppf((1 - p) / 2, df = n ))) 
+  return np.sqrt(sum(x**2)/ (6*chi2.ppf((1+p)/2, df = 2n))), \
+  np.sqrt(sum(x**2)/ (6*chi2.ppf((1 - p) / 2, df = 2n ))) 
